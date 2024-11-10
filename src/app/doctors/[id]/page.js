@@ -5,6 +5,7 @@ import { PiGenderIntersexBold } from "react-icons/pi";
 import { CiHospital1 } from "react-icons/ci";
 import { WiTime3 } from "react-icons/wi";
 import { Button } from "@/components/ui/button";
+import { DatePicker } from "@/components/DatePicker";
 
 export default function DoctorDetail({ params }) {
   const doctorInfo = doctors.find((doctor) => doctor.id == params.id);
@@ -33,33 +34,34 @@ export default function DoctorDetail({ params }) {
                 pour-over, neutra jean.
               </p>
               <div className="flex justify-between my-2">
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-2">
                     <PiGenderIntersexBold />
                     <h1 className="font-semibold">Gender</h1>
                   </div>
                   <h1>{doctorInfo.gender}</h1>
                 </div>
-                <div className="flex justify-between my-2 gap-3">
-                  <div className="flex items-center">
+                <div className="flex justify-between my-2 ">
+                  <div className="flex items-center gap-2">
                     <CiHospital1 />
                     <h1 className="font-semibold">Hospital</h1>
                   </div>
                   <h1>{doctorInfo.hospital}</h1>
                 </div>
-                <div className="flex justify-between my-2 gap-3">
-                  <div className="flex items-center">
+                <div className="flex justify-between my-2 ">
+                  <div className="flex items-center gap-2">
                     <WiTime3 />
                     <h1 className="font-semibold">AppointmentTime</h1>
                   </div>
                   <h1>{doctorInfo.appointmentTime}</h1>
                 </div>
-                <div className="flex justify-between my-2 gap-3">
-                  <div className="flex items-center">
+                <div className="flex justify-between my-2 ">
+                  <div className="flex items-center gap-2">
                   <FaMoneyBillWaveAlt />
                     <h1 className="font-semibold">Fees : </h1>
                   </div>
                   <h1>${doctorInfo.fees}</h1>
                 </div>
+                <DatePicker />  
                 <Button className={'w-full'}>Book Your Appointment</Button>
             </div>
             <div className="lg:w-1/2 relative w-full lg:h-auto h-64 object-cover object-center rounded">

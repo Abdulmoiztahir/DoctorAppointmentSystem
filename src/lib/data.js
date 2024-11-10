@@ -159,4 +159,153 @@ export const doctors = [
   }
 ];
 
+export const currentUser = {
+    name : "moiz",
+    role : "doctor",
+    email : "moiz@gmail.com",
+}
 
+
+export const appointments = [
+    {
+        user: {
+            name: "Alice Johnson",
+            email: "alice.johnson@example.com"
+        },
+        appointmentTime: "10:30 AM",
+        status: "Confirmed",
+        appointmentDate: "2024-11-07",
+        doctor: {
+            name: "Dr. John Smith",
+            category: "Cardiologist",
+            hospital: "City Heart Center"
+        }
+    },
+    {
+        user: {
+            name: "Bob Williams",
+            email: "bob.williams@example.com"
+        },
+        appointmentTime: "2:00 PM",
+        status: "Pending",
+        appointmentDate: "2024-11-07",
+        doctor: {
+            name: "Dr. Emily Chen",
+            category: "Dermatologist",
+            hospital: "SkinCare Clinic"
+        }
+    },
+    {
+        user: {
+            name: "Charlie Brown",
+            email: "charlie.brown@example.com"
+        },
+        appointmentTime: "9:30 AM",
+        status: "Confirmed",
+        appointmentDate: "2024-11-08",
+        doctor: {
+            name: "Dr. Sarah Patel",
+            category: "Pediatrician",
+            hospital: "Children's Health Hospital"
+        }
+    },
+    {
+        user: {
+            name: "Daisy Miller",
+            email: "daisy.miller@example.com"
+        },
+        appointmentTime: "11:00 AM",
+        status: "Cancelled",
+        appointmentDate: "2024-11-09",
+        doctor: {
+            name: "Dr. James Brown",
+            category: "Orthopedic Surgeon",
+            hospital: "OrthoPlus Hospital"
+        }
+    },
+    {
+        user: {
+            name: "Edward Lee",
+            email: "edward.lee@example.com"
+        },
+        appointmentTime: "3:00 PM",
+        status: "Confirmed",
+        appointmentDate: "2024-11-10",
+        doctor: {
+            name: "Dr. Lisa Nguyen",
+            category: "Gynecologist",
+            hospital: "Women’s Health Center"
+        }
+    },
+    {
+        user: {
+            name: "Fiona Clark",
+            email: "fiona.clark@example.com"
+        },
+        appointmentTime: "8:30 AM",
+        status: "Pending",
+        appointmentDate: "2024-11-10",
+        doctor: {
+            name: "Dr. William Lee",
+            category: "Ophthalmologist",
+            hospital: "EyeCare Institute"
+        }
+    },
+    {
+        user: {
+            name: "George Harris",
+            email: "george.harris@example.com"
+        },
+        appointmentTime: "10:15 AM",
+        status: "Confirmed",
+        appointmentDate: "2024-11-11",
+        doctor: {
+            name: "Dr. Karen Alvarez",
+            category: "Psychiatrist",
+            hospital: "Mind Wellness Center"
+        }
+    },
+    {
+        user: {
+            name: "Hannah Scott",
+            email: "hannah.scott@example.com"
+        },
+        appointmentTime: "4:00 PM",
+        status: "Cancelled",
+        appointmentDate: "2024-11-11",
+        doctor: {
+            name: "Dr. Michael Davis",
+            category: "Oncologist",
+            hospital: "Cancer Care Institute"
+        }
+    },
+    {
+        user: {
+            name: "Irene Walker",
+            email: "irene.walker@example.com"
+        },
+        appointmentTime: "1:00 PM",
+        status: "Confirmed",
+        appointmentDate: "2024-11-12",
+        doctor: {
+            name: "Dr. Sophia Wilson",
+            category: "Endocrinologist",
+            hospital: "Hormone Clinic"
+        }
+    },
+    {
+        user: {
+            name: "Jack Thompson",
+            email: "jack.thompson@example.com"
+        },
+        appointmentTime: "10:00 AM",
+        status: "Pending",
+        appointmentDate: "2024-11-13",
+        doctor: {
+            name: "Dr. Ryan Garcia",
+            category: "Gastroenterologist",
+            hospital: "Digestive Health Center"
+        }
+    }
+  ];
+  

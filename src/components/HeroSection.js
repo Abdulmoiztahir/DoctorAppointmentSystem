@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -27,7 +28,9 @@ export default function HeroSection() {
             hexagon try-hard chambray.
           </p>
           <div className="flex justify-center gap-2">
-            <Button >Apply As A Doctor</Button>
+            <Link href={"/doctors/apply"}>
+              <Button>Apply As A Doctor</Button>
+            </Link>
             <Button variant="outline">Find Doctors You Need</Button>
           </div>
         </div>
