@@ -10,10 +10,13 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { currentUser } from "@/lib/data";
+import { auth, signOut } from "../../auth";
+import Image from "next/image";
 
-export default function Header() {
-  const session = {currentUser};
+export default async function Header() {
+  const session = await auth();
+  console.log("session =>", session);
+
   return (
     <div className="bg-secondary py-3">
       <div className="flex container mx-auto justify-between p-2">
@@ -24,10 +27,12 @@ export default function Header() {
           <Menubar>
             <MenubarMenu>
               <MenubarTrigger className={"border-none"}>
-                <Avatar>
-                  <AvatarImage src="https://github.com/shadcn.png" />
-                  <AvatarFallback>DAS</AvatarFallback>
-                </Avatar>
+                <Image
+                  src={session?.user?.image}
+                  height={40}
+                  width={40}
+                  className="rounded-full"
+                />
               </MenubarTrigger>
               <MenubarContent>
                 <Link href={"/profile"}>
@@ -37,8 +42,15 @@ export default function Header() {
                 <Link href={"/appointments"}>
                   <MenubarItem>My Appointments</MenubarItem>
                 </Link>
-                <MenubarSeparator />
-                <MenubarItem>Logout</MenubarItem>
+                <MenubarSeparator />{" "}
+                <form
+                  action={async () => {
+                    "use server";
+                    await signOut("google");
+                  }}
+                >
+                  <Button type="submit">Logout</Button>
+                </form>
               </MenubarContent>
             </MenubarMenu>
           </Menubar>

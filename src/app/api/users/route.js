@@ -16,9 +16,6 @@ export async function POST(req) {
       { status: 201 }
     );
   } catch (e) {
-    const obj = await req.json();
-    let newUser = await new userModal({ ...obj });
-    newUser = await newUser.save();
     return Response.json(
       {
         error: true,
@@ -38,7 +35,7 @@ export async function GET(req) {
           msg: "User Registered Succesfully",
           user: users,
         },
-        { status: 201 }
+        { status: 200 }
       );
 }
 export async function PUT(req) {}

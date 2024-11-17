@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { auth } from "../../auth";
 
-export default function HeroSection() {
+export default async function  HeroSection() {
+  const session = await auth()
   return (
     <section className="text-gray-600 my-5 body-font">
       <div className="container mx-auto flex py-12 md:flex-row flex-col items-center">
@@ -28,8 +30,8 @@ export default function HeroSection() {
             hexagon try-hard chambray.
           </p>
           <div className="flex justify-center gap-2">
-            <Link href={"/doctors/apply"}>
-              <Button>Apply As A Doctor</Button>
+            <Link href={session? "/doctors/apply " : "/signin"}>
+              <Button >Apply As A Doctor</Button>
             </Link>
             <Button variant="outline">Find Doctors You Need</Button>
           </div>
