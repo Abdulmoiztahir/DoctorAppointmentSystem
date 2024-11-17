@@ -32,8 +32,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     },
     async jwt({ token }) {
       const user = await handlelogin({ email: token.email });
-      console.log("user in JWT " , user);
-      token.roll  = user.role,
+      token.role  = user.role,
       token._id = user._id  
       // User is available during sign-in
       // token.id = user.id;

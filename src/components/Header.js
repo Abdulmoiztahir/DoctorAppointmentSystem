@@ -15,7 +15,7 @@ import Image from "next/image";
 
 export default async function Header() {
   const session = await auth();
-  console.log("session =>", session);
+  console.log("session in header =>", session);
 
   return (
     <div className="bg-secondary py-3">
