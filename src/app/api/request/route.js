@@ -44,7 +44,7 @@ export async function POST(req) {
 
 export async function GET(req) {
   await connectDB();
-  const requests = await RequestModal.find();
+  const requests = await RequestModal.find().populate("user");
   return Response.json(
     {
       error: false,
@@ -54,6 +54,7 @@ export async function GET(req) {
     { status: 200 }
   );
 }
+
 export async function PUT(req) {
   await connectDB();
   try {

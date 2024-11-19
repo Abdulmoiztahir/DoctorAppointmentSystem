@@ -63,8 +63,8 @@ export default function DoctorRequest({ requests }) {
       <CardHeader className="flex flex-row items-center space-x-4">
         <Avatar className="h-10 w-10">
           <AvatarImage
-            src={request.user.Picture}
-            alt={request.user.firstName}
+            src={request.user.picture}
+            alt={request.user.name}
           />
           <AvatarFallback>
             {request.user.name}
